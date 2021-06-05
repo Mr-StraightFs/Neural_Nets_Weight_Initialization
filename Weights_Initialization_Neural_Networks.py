@@ -167,3 +167,9 @@ axes = plt.gca()
 axes.set_xlim([-1.5,1.5])
 axes.set_ylim([-1.5,1.5])
 plot_decision_boundary(lambda x: predict_dec(parameters, x.T), train_X, train_Y)
+
+# The model with He initialization separates the blue and the red dots very well in a small number of iterations.
+#Different initializations lead to very different results
+#Random initialization is used to break symmetry and make sure different hidden units can learn different things
+#Resist initializing to values that are too large!
+#He initialization works well for networks with ReLU activations
